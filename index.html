@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ℳℯ𝒸ℒℴ𝓈𝒜𝓃𝒿ℴ𝓈 - 𝒞𝒶𝓁𝒸𝓊𝓁𝒶𝒹ℴ𝓇𝒶</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- FONTES -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@600;700&family=Zen+Kaku+Gothic+New:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- VIDEO -->
+    <video id="video" autoplay muted loop playsinline>
+        <source src="video.mp4" type="video/mp4">
+    </video>
+
+    <div class="overlay"></div>
+
+    <!-- TITULO -->
+    <div class="logo"> Mec Los </div>
+    <div class="sub"></div>
+
+    <!-- CALCULADORA -->
+    <div class="calc-box">
+
+        <label for="ReparoMecanica">
+            Reparo mecânica (1100$ por unid.)
+        </label>
+        <input id="ReparoMecanica" type="number" placeholder="Quantidade">
+
+        <label for="ReparoNorte">
+            Reparo norte (1500$ por unid.)
+        </label>
+        <input id="ReparoNorte" type="number" placeholder="Quantidade">
+
+        <label for="ReparoSul">
+            Reparo sul (1900$ por unid.)
+        </label>
+        <input id="ReparoSul" type="number" placeholder="Quantidade">
+
+        <label for="Kit">
+            Kit de ferramentas básico (1100$ por unid.)
+        </label>
+        <input id="Kit" type="number" placeholder="Quantidade">
+
+        <label for="KitAvancado">
+            Kit de ferramentas avançado (3400$ por unid.)
+        </label>
+        <input id="KitAvancado" type="number" placeholder="Quantidade">
+
+        <label for="Chave">
+            Chave inglesa (2300$ por unid.)
+        </label>
+        <input id="Chave" type="number" placeholder="Quantidade">
+
+        <label for="Pneu">
+            Pneu (1100$ por unid.)
+        </label>
+        <input id="Pneu" type="number" placeholder="Quantidade">
+
+        <label for="Tunning">
+            Tunning (valor base +50%)
+        </label>
+        <input id="Tunning" type="number" placeholder="Valor do tunning">
+
+
+        <label for="Tunning30">
+        Tunning (desconto +20%)
+        </label>
+
+        <input
+          id="Tunning30"
+          type="number"
+        placeholder="Valor do tunning"
+/>
+
+        <!-- CHECKBOXES -->
+
+    <div class="check-grid">
+
+    <label class="check-line">
+        <input id="sul" type="checkbox">
+        <span>Reboque Sul</span>
+    </label>
+
+    <label class="check-line">
+        <input id="norte" type="checkbox">
+        <span>Reboque Norte</span>
+    </label>
+
+    <label class="check-line">
+        <input id="explodido" type="checkbox">
+        <span>Carro Explodido</span>
+    </label>
+
+    <label class="check-line">
+        <input id="desconto" type="checkbox">
+        <span>Desconto 20%</span>
+    </label>
+
+</div>
+
+        <!-- BOTÕES -->
+
+        <button class="btn-calc" onclick="calcular()">
+            CALCULAR TOTAL
+        </button>
+
+        <button class="btn-clear" onclick="limpar()">
+            LIMPAR
+        </button>
+
+        <!-- TOTAL -->
+
+        <div id="total" class="total">
+            TOTAL: R$ 0,00
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

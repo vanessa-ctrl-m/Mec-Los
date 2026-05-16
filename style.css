@@ -1,0 +1,201 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Zen Kaku Gothic New', sans-serif;
+}
+
+body{
+    width:100%;
+    min-height:100vh;
+    overflow-x:hidden;
+    background:#000000;
+    color:#fff;
+    position:relative;
+}
+
+/* VIDEO */
+
+#video{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    z-index:-2;
+    filter:brightness(0.35);
+}
+
+.overlay{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,0.45);
+    z-index:-1;
+}
+
+/* TOPO */
+
+.logo{
+    text-align:center;
+    margin-top:18px;    
+    font-size:50px;
+    font-weight:600;
+    letter-spacing:4px;
+    color:#000080;
+    text-shadow:
+        0 0 10px #000080,
+        0 0 30px #000080;
+    font-family:'Rajdhani', sans-serif;
+}
+
+/* CAIXA */
+
+.calc-box{
+    width:100%;
+    max-width:500px;
+    margin:auto;
+    padding:13px;
+    border-radius:14px;
+
+    background:rgba(0,0,0,0.75);
+
+    border:2px solid #000080;
+
+    box-shadow:
+        0 0 10px rgba(26, 89, 152, 0.4),
+        0 0 30px rgba(7, 47, 142, 0.353);
+
+    backdrop-filter:blur(6px);
+}
+
+label{
+    display:block;
+    margin-top:8px;
+    margin-bottom:3px;
+    color:#ccd9ff;
+    font-size:12px;
+}
+
+input{
+    width:100%;
+    padding:10px;
+    border-radius:5px;
+    border:1px solid rgba(42, 78, 255, 0.4);
+    background:#111;
+    color:#fff;
+    outline:none;
+    transition:0.2s;
+}
+
+input:focus{
+    border-color:#000080;
+    box-shadow:0 0 5px rgba(4, 0, 255, 0.4);
+}
+
+/* CHECKBOX */
+
+.check-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:10px;
+    margin-top:15px;
+}
+
+.check-line{
+    display:flex;
+    align-items:center;
+    gap:7px;
+
+    padding:8px;
+    border-radius:5px;
+
+    background:rgba(255,255,255,0.04);
+
+    border:1px solid rgba(255,255,255,0.08);
+
+    color:#b4b3ff;
+
+    font-size:9px;
+
+    cursor:pointer;
+
+    transition:0.2s;
+}
+
+.check-line:hover{
+    background:rgba(255, 255, 255, 0.099);
+}
+
+.check-line input[type="checkbox"]{
+    width:14px;
+    height:14px;
+    accent-color:#000080;
+    cursor:pointer;
+    flex-shrink:0;
+}
+/* BOTÕES */
+
+button{
+    width:100%;
+    padding:10px;
+    border:none;
+    border-radius:8px;
+    margin-top:14px;
+    cursor:pointer;
+
+    font-size:12px;
+    font-weight:bold;
+    color:#fff;
+
+    transition:0.2s;
+}
+
+button:hover{
+    transform:translateY(-2px);
+}
+
+.btn-calc{
+    background:#000080;
+    box-shadow:0 0 10px rgba(21, 0, 255, 0.5);
+}
+
+.btn-calc:hover{
+    background:#224aff;
+}
+
+.btn-clear{
+    background:#333;
+}
+
+.btn-clear:hover{
+    background:#444;
+}
+
+/* TOTAL */
+
+.total{
+    margin-top:22px;
+    text-align:center;
+    font-size:22px;
+    font-weight:bold;
+    color:#0066ff;
+
+    text-shadow:
+        0 0 8px #4c00ff,
+        0 0 20px rgba(0, 21, 255, 0.5);
+}
+
+/* RESPONSIVO */
+
+@media(max-width:500px){
+
+    .logo{
+        font-size:25px;
+    }
+
+    .calc-box{
+        padding:20px;
+    }
+
+}
